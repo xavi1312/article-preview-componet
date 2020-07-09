@@ -33,6 +33,7 @@ body {
 button {
   appearance: none;
   border: none;
+  outline: none;
 }
 
 /* CARD */
@@ -74,21 +75,54 @@ button {
 
 /* Card footer */
 .card__footer {
+  min-height: 74px;
+
   padding: var(--card-padding);
   padding-top: 17px;
 
   display: flex;
   align-items: center;
+
+  border-radius: 0 0 6px 6px;
+
+  background: linear-gradient(to right, #fff 50%, var(--dark-graysh-blue) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+
+  transition: all 1s;
 }
-.card__avatar-icon,
 .card__share-button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
   border-radius: 50%;
+
+  background: linear-gradient(
+    to right,
+    var(--light-grayish-blue) 50%,
+    var(--grayish-blue) 50%
+  );
+  background-size: 200% 100%;
+  background-position: left bottom;
+
+  transition: background 1s;
+  transition-delay: 400ms;
+}
+/* Card footer person share */
+.card__footer-person-share {
+  display: flex;
+  align-items: center;
 }
 .card__avatar-icon {
   width: 40px;
   margin-right: 16px;
+  border-radius: 50%;
 }
-
 .card__footer-text strong,
 .card__footer-text span {
   display: block;
@@ -100,13 +134,40 @@ button {
   color: var(--grayish-blue);
 }
 
-.card__share-button {
-  width: 32px;
-  height: 32px;
-
+/* Card footer social share */
+.card__footer-social-share {
+  display: none;
+  color: white;
+}
+.card__social-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+.card__social-icons span {
+  margin-right: 23px;
+  color: var(--grayish-blue);
+  letter-spacing: 3px;
+}
+.card__social-icon {
+  margin-right: 16px;
+}
+.card__footer-social-share .card__share-button {
+  background-color: var(--dark-blue);
+}
 
-  margin-left: auto;
+/* Card footer--share */
+.card__footer--share {
+  background-position: right bottom;
+  transition: all 1s;
+}
+.card__footer--share .card__share-button {
+  background-position: right bottom;
+  transition: 1s;
+  transition-delay: 2ms;
+}
+.card__footer--share .card__footer-person-share {
+  display: none;
+}
+.card__footer--share .card__footer-social-share {
+  display: block;
 }
