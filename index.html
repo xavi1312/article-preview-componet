@@ -14,17 +14,6 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Article preview component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -44,7 +33,7 @@
           </p>
         </div>
         <footer class="card__footer">
-          <section class="card__footer-person-share">
+          <section class="card__footer-share--person">
             <img
               class="card__avatar-icon"
               src="./images/avatar-michelle.jpg"
@@ -55,40 +44,64 @@
               <span>28 Jan 2020</span>
             </p>
           </section>
-          <section class="card__footer-social-share">
+          <section class="card__footer-share--social">
             <p class="card__social-icons">
               <span>SHARE</span>
-              <img
-                class="card__social-icon"
-                src="./images/icon-facebook.svg"
-                alt="facebook icon"
-                srcset=""
-              />
-              <img
-                class="card__social-icon"
-                src="./images/icon-twitter.svg"
-                alt="twitter icon"
-                srcset=""
-              />
-              <img
-                class="card__social-icon"
-                src="./images/icon-pinterest.svg"
-                alt="pinterest icon"
-                srcset=""
-              />
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-facebook.svg"
+                  alt="facebook icon"
+                />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-twitter.svg"
+                  alt="twitter icon"
+                />
+              </a>
+              <a href="https://www.pinterest.es/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-pinterest.svg"
+                  alt="pinterest icon"
+                />
+              </a>
             </p>
           </section>
           <button id="shareButton" class="card__share-button">
             <img src="./images/icon-share.svg" alt="Share" />
           </button>
+          <section id="tooltip" class="card__tooltip">
+            <p class="card__social-icons">
+              <span>SHARE</span>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-facebook.svg"
+                  alt="facebook icon"
+                />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-twitter.svg"
+                  alt="twitter icon"
+                />
+              </a>
+              <a href="https://www.pinterest.es/" target="_blank">
+                <img
+                  class="card__social-icon"
+                  src="./images/icon-pinterest.svg"
+                  alt="pinterest icon"
+                />
+              </a>
+            </p>
+            <div class="arrow"></div>
+          </section>
         </footer>
       </div>
-      <!-- <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div> -->
     </div>
     <script src="main.js"></script>
   </body>
